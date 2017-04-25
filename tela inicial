@@ -1,0 +1,42 @@
+		<form  method="POST" action="funcoes.php?funcao=gravar">
+			<table border ="1">
+				<tr>
+				   <td>mateira:</td>
+				   <td>nota1:</td>
+				   <td>nota2:</td>
+				   <td>nota3:</td>
+		   		</tr>
+		   		<tr>
+		   			<td><input type="text" name="materia"></td>
+					<td><input type="text" name="n1"></td>
+					<td><input type="text" name="n2"></td>
+					<td><input type="text" name="n3"></td>
+		   		</tr>
+			</table>
+		   <input type="submit" value="CADASTRAR">
+		</form>
+
+		<table border='12'>
+			<tr>
+				<td>materia</td>
+				<td>Nota 1</td>
+				<td>Nota 2</td>
+				<td>Nota 3</td>
+				<td>EDITAR</td>
+				<td>EXCLUIR</td>
+			</tr>
+			<?
+			$sql_visualizar = mysql_query("SELECT * FROM boletim ");
+
+			?>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="funcoes.php?funcao=editar">editar</a></td>
+				<td><a href="funcoes.php?funcao=excluir">excluir</a></td>
+			</tr>	
+		</table>
+	</body>
+ </html>
