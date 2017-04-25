@@ -1,0 +1,15 @@
+<?
+	include "conexao.php";
+
+	$grava_materia = $_POST['materia'];
+ 	$grava_nota1 =$_POST['n1'];
+ 	$grava_nota2 =$_POST['n2'];
+ 	$grava_nota3 =$_POST['n3'];
+
+//********************************GRAVAÇÃO*****************************
+if($_GET['funcao'] == "gravar"){
+$sql_gravar = msql_query("INSERT INTO materias (mateira, n1, n2, n3) VALUE ('$grava_materia','$grava_nota1','$grava_nota2','$grava_nota3')");	
+header("Location: materias.php");
+}
+
+?>
