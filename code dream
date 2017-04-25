@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form method="post" action="funcao.php">
+<table width="554" height="72" border="1">
+  <tr>
+    <td width="376">Materia</td>
+    <td width="50">Nota 1</td>
+    <td width="50">Nota 2</td>
+    <td width="50">Nota 3</td>
+  </tr>
+  <tr>
+    <td><label for="materia"></label>
+      <input name="materia" type="text" id="materia" /></td>
+    <td><input name="n1" type="text" id="n1" /></td>
+    <td><input name="n2" type="text" id="n2" /></td>
+    <td><input name="n3" type="text" id="n3" /></td>
+  </tr>
+</table>
+<p>
+  <input type="submit" name="enviar" id="enviar" value="CADASTRAR" />
+</p>
+<table width="554" height="63" border="1">
+  <tr>
+    <td bgcolor="#666666">MATERIA</td>
+    <td bgcolor="#666666">NOTA 1</td>
+    <td bgcolor="#666666">NOTA 2</td>
+    <td bgcolor="#666666">NOTA 3</td>
+    <td bgcolor="#666666">EDITAR</td>
+    <td bgcolor="#666666">EXCLUIR</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="funcoes.php?funcao=editar">EDITAR</a></td>
+    <td><a href="funcoes.php?funcao=excluir">EXCLUIR</a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+</body>
+</html>
