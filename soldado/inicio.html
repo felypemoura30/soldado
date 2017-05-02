@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title> cadastro </title>
+	</head>
+	<body>
+		<form name="materias" method="POST" action="cadastrando.php?funcao=gravar">
+			Materia:<input type='text' name='materia'></br>
+			Nota 1:<input type='number' name ='n1' min='0' max='100'></br>
+			Nota 2:<input type='number' name='n2' min='0' max='100'></br>
+			Nota 3:<input type='number' name='n3' min='0' max='100'></br>
+			<input type='submit' value='Cadastrar'>
+		</form>
+
+		<table border='1'>
+			<tr>
+				<td>
+					MATERIA
+				</td>
+				<td>
+					NOTA 1
+				</td>
+				<td>
+					NOTA 2
+				</td>
+				<td>
+					NOTA 3
+				</td>
+				<td>
+					EDITAR
+				</td>
+				<td>
+					EXCLUIR
+				</td>				
+			</tr>
+
+			<? 
+				$sql_visualizar = mysql_query("SELECT * FROM materias ORDER BY materia");
+				while ($linha = mysql_fetch_array($sql_visualizar)) {
+					$p_materia = $linha['materia'];
+					//$p_n1 = $linha['n1'];
+					//$p_n2 = $linha['n2'];
+					//$p_n3 = $linha['n3'];
+					echo $p_materia;
+			?>
+			<tr>
+				<td>
+					<? echo $p_materia; ?>
+				</td>
+				<td>
+					<?// echo $p_n1; ?>
+				</td>
+				<td>
+					<? //echo $p_n2; ?>
+				</td>
+				<td>
+					<? //echo $p_n3; ?>
+				</td>
+				<td>
+					<a href='cadastrando.php?funcao=editar'> EDITAR</a>
+				</td>
+				<td>
+					<a href='cadastrando.php?funcao=excluir'> EXCLUIR</a>
+				</td>
+			</tr>
+			<?
+				}
+			?>		
+		</table>	
+	</body>
+</html>
